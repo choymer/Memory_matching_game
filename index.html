@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Matching Game</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- <img src="./card-back.png" alt=""> -->
+
+
+  <section>
+    <table class="table-of-cards">
+      <tr>
+        <td>
+          <img id="ace-spades-one" src="./card-back.png" onclick="revealCard(this.id, './ace-of-spades.png')" alt="">
+        </td>
+        <td>
+          <img id="jack-spades" src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+        <td>
+          <img src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+        <td>
+          <img src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+        <td>
+          <img src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+        <td>
+          <img src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+        <td>
+          <img src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+        <td>
+          <img src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+        <td>
+          <img src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+        <td>
+          <img src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+        <td>
+          <img class="jack-spades" src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+        <td>
+          <img src="./card-back.png" onclick="revealCard()" alt="">
+        </td>
+        <td>
+          <img id="ace-spades-two" src="./card-back.png" onclick="revealCard(this.id, './ace-of-spades.png')" alt="">
+        </td>
+      </tr>
+    </table>
+  </section>
+  
+  <script src="./app.js"></script>
+</body>
+</html>
