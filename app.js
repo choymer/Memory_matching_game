@@ -1,6 +1,11 @@
-const aceOfSpadesOne = document.getElementById('ace-spades-one');
-const aceOfSpadesTwo = document.getElementById('ace-spades-two');
+const attempts = document.querySelector('.attempts')
 let counter = 0;
+let numOfAttempts = 0;
+
+function removeClasses() {
+      document.querySelectorAll('.same_card')[(document.querySelectorAll('.same_card').length-1)].classList.remove('same_card');
+      document.querySelectorAll('.same_card')[(document.querySelectorAll('.same_card').length-1)].classList.remove('same_card');   
+    }
 
 function revealCard(id, card) {
 counter++
@@ -17,22 +22,20 @@ counter++
   setTimeout(function() {
 
     document.querySelectorAll('.same_card')[0].src = './card-back.png'
-    document.querySelectorAll('.same_card')[1].src = './card-back.png'
+    document.querySelectorAll('.same_card')[(document.querySelectorAll('.same_card').length-1)].src = './card-back.png'
 
-    function removeClasses() {
-      document.querySelectorAll('.same_card')[0].classList.remove('same_card');
-      document.querySelectorAll('.same_card')[0].classList.remove('same_card');   
-    }
+    
+    counter = 0;
+    numOfAttempts++
     removeClasses()
 }, 3000);
 
-counter = 0;
-    
+    } else {
+      numOfAttempts++
+      counter = 0;
+      removeClasses();
     }
-
   }
-
-
-  
+  attempts.innerHTML = `<h1>Number of attempts: ${numOfAttempts}</h1>`;
 }
 
